@@ -1,224 +1,121 @@
-# Mohamed Salah vs Kylian Mbappé: An Attacking Performance Analysis (2017/18–2024/25)
+# Mohamed Salah vs Kylian Mbappé: Attacking Performance Analysis (2017/18–2024/25)
 
 ## Project Overview
 
-This project analyzes the attacking performance of Mohamed Salah and Kylian Mbappé from the 2017/18 to 2024/25 football seasons.
+This project analyzes and compares the attacking performances of Mohamed Salah and Kylian Mbappé across eight football seasons (2017/18–2024/25).
 
-The purpose of this analysis was to determine:
+The goal of this analysis was to determine:
 
 **"Between Mohamed Salah and Kylian Mbappé, who was the more efficient and consistent attacking contributor from 2017/18–2024/25?"**
 
-Rather than comparing only goals and assists, this project evaluates attacking performance through multiple dimensions:
-
-* Offensive output
-* Finishing efficiency
-* Chance creation
-* Season-to-season consistency
-
-The analysis was completed using SQL in Google BigQuery, with statistical comparisons used to evaluate both average performance and consistency.
+The analysis focuses on attacking output, finishing efficiency, chance creation, and season-to-season consistency rather than relying only on total goals and assists.
 
 ---
 
-# Tools & Technologies
+## Tools Used
 
-* **SQL**
-* **Google BigQuery**
-* **FIFA Player Database**
-* **FBref Player Statistics**
-* **Statistical Analysis**
-
-  * Average performance comparison
-  * Standard deviation consistency analysis
+- SQL
+- Google BigQuery
+- Football performance datasets
+- Statistical analysis (Standard Deviation)
+- Data cleaning and transformation
 
 ---
 
-# Data
+## Dataset
 
-The dataset included football player information and performance statistics from:
+The dataset contains player performance data from FIFA and FBref covering the 2017/18–2024/25 seasons.
 
-**2017/18 – 2024/25 seasons**
+Key information analyzed:
 
-The analysis combined:
-
-* FIFA player ratings and attributes
-* FBref advanced performance metrics
-
-The data was analyzed using per-90 statistics to provide a fair comparison between players regardless of playing time.
-
----
-
-# Research Methodology
-
-The project followed these steps:
-
-1. Explored and validated the football dataset.
-2. Identified player records for Mohamed Salah and Kylian Mbappé.
-3. Cleaned duplicate player entries.
-4. Selected relevant attacking performance metrics.
-5. Calculated season averages.
-6. Compared overall attacking output.
-7. Measured consistency using standard deviation.
-8. Interpreted results and created a final analytical report.
+- Player statistics
+- Club and league information
+- Per 90 attacking metrics
+- Expected statistics
+- Chance creation metrics
 
 ---
 
-# Data Cleaning
+## Analysis Categories
 
-During data validation, Mohamed Salah appeared under two different player names:
+### 1. Offensive Output
 
-* Mohamed Salah Ghaly
-* Mohamed Salah Hamed Ghaly
+Metrics analyzed:
 
-Both records represented the same player.
+- Goals per 90
+- Assists per 90
+- Goal contributions per 90
+- Expected goals + expected assists (xG+xAG)
 
-The entries were combined into one category:
+### 2. Finishing Efficiency
 
-**Mohamed Salah**
+Metrics analyzed:
 
-This ensured all eight seasons from 2017/18–2024/25 were included in the analysis.
+- Shot-on-target percentage
+- Goals per shot
+- Goals per shot on target
 
----
+### 3. Chance Creation
 
-# Metrics Analyzed
+Metrics analyzed:
 
-## Offensive Output
+- Expected assists per 90
+- Shot-creating actions (SCA)
+- Goal-creating actions (GCA)
 
-Metrics used:
+### 4. Consistency
 
-* Goals per 90
-* Assists per 90
-* Expected Goal Contributions (xG+xAG) per 90
+Consistency was measured using standard deviation across seasons.
 
-## Finishing Efficiency
-
-Metrics used:
-
-* Shot-on-target percentage
-* Goals per shot
-* Goals per shot on target
-
-## Chance Creation
-
-Metrics used:
-
-* Expected assists per 90
-* Shot-Creating Actions (SCA)
-* Goal-Creating Actions (GCA)
-
-## Consistency
-
-Consistency was measured using:
-
-* Season-by-season comparisons
-* Career averages
-* Standard deviation across attacking metrics
+A lower standard deviation indicates more consistent performance.
 
 ---
 
-# Key Findings
+## Key Findings
 
-## Average Attacking Output
+### Attacking Output
 
-Kylian Mbappé produced the higher average attacking output across the analyzed period.
+Kylian Mbappé produced higher average attacking numbers:
 
-Mbappé recorded higher averages in:
+- Higher goals per 90
+- Higher goal contributions per 90
+- Higher expected attacking contributions
 
-| Metric                        | Mohamed Salah | Kylian Mbappé |
-| ----------------------------- | ------------: | ------------: |
-| Goals per 90                  |          0.69 |          0.97 |
-| Assists per 90                |          0.32 |          0.28 |
-| Goal Contributions per 90     |          1.01 |          1.25 |
-| Expected Contributions per 90 |          0.93 |          1.13 |
-| Shot-Creating Actions per 90  |          4.43 |          4.64 |
-| Goal-Creating Actions per 90  |          0.68 |          0.81 |
+### Creativity
 
-Mbappé's results indicate a higher attacking peak, particularly through goal scoring and overall attacking involvement.
+Mohamed Salah recorded a slightly higher assist rate, demonstrating strong creative contribution alongside his goal output.
 
-Salah recorded a higher assists-per-90 rate, showing a stronger contribution through direct chance creation.
+### Consistency
 
----
+Mohamed Salah displayed greater consistency across all measured metrics.
 
-# Consistency Analysis
+Salah recorded a lower standard deviation in:
 
-Standard deviation was calculated across six attacking metrics.
+- Goals per 90
+- Assists per 90
+- Goal contributions per 90
+- Expected contributions per 90
+- Shot-creating actions
+- Goal-creating actions
 
-A lower standard deviation indicates a more consistent player.
-
-| Metric                        | More Consistent Player |
-| ----------------------------- | ---------------------- |
-| Goals per 90                  | Mohamed Salah          |
-| Assists per 90                | Mohamed Salah          |
-| Goal Contributions per 90     | Mohamed Salah          |
-| Expected Contributions per 90 | Mohamed Salah          |
-| Shot-Creating Actions         | Mohamed Salah          |
-| Goal-Creating Actions         | Mohamed Salah          |
-
-Mohamed Salah recorded a lower standard deviation in every category analyzed.
-
-This suggests Salah maintained a more stable level of attacking performance throughout the eight-season period, while Mbappé experienced greater season-to-season variation despite higher average output.
+This suggests Salah maintained a more stable level of elite attacking performance across the eight-season period.
 
 ---
 
-# Final Conclusion
-
-The analysis shows that Kylian Mbappé produced the stronger average attacking output between 2017/18 and 2024/25.
-
-However, Mohamed Salah demonstrated greater consistency, maintaining a more stable attacking contribution across all measured categories.
-
-Overall:
-
-* **Higher attacking peak:** Kylian Mbappé
-* **Greater attacking consistency:** Mohamed Salah
-
-This project demonstrates how SQL and statistical analysis can be used to transform raw sports data into meaningful performance insights.
+## Repository Structure
 
 ---
 
-# Limitations
+## Report
 
-This analysis has several limitations:
+The full written analysis can be found here:
 
-* Only league performances were included.
-* Team tactics and teammates were not adjusted for.
-* League strength differences were not accounted for.
-* Defensive contributions were excluded.
-* Per-90 statistics measure efficiency but not total workload.
+[View Full Report](reports/Salah_vs_Mbappe_Attacking_Analysis.pdf)
 
 ---
 
-# Project Structure
+## Conclusion
 
-```
-├── README.md
-│
-├── SQL/
-│   ├── 01_dataset_exploration.sql
-│   ├── 02_player_validation.sql
-│   ├── 03_player_season_check.sql
-│   ├── 04_metric_selection.sql
-│   ├── 05_attacking_metrics.sql
-│   ├── 06_average_attacking_comparison.sql
-│   ├── 07_season_by_season_comparison.sql
-│   ├── 08_player_averages.sql
-│   ├── 09_consistency_analysis.sql
-│   └── 10_standard_deviation_analysis.sql
-│
-├── Report/
-│   └── Salah_vs_Mbappe_Attacking_Analysis.pdf
-│
-└── Results/
-    ├── average_metrics.png
-    └── consistency_results.png
-```
+The analysis shows that Mbappé produced greater attacking output on average, while Salah demonstrated superior consistency across the analyzed period.
 
----
-
-# Skills Demonstrated
-
-* SQL querying
-* Data cleaning
-* Data validation
-* Statistical analysis
-* Performance analytics
-* Data storytelling
-* Communicating analytical findings
+The results highlight the difference between peak attacking production and sustained elite performance.
