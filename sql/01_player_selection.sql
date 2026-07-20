@@ -1,0 +1,3 @@
+SELECT *
+FROM `football_1718_2425.1718-2425_football`
+LIMIT 10;
